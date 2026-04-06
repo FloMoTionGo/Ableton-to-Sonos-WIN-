@@ -1,6 +1,3 @@
-# Ableton-to-Sonos-WIN-
-Send audio from Ableton on Windows to Sonos 
-
 # Ableton to Sonos Streamer
 
 Stream audio from Ableton Live to Sonos speakers over your local network using Python.
@@ -21,7 +18,7 @@ Ableton outputs to a virtual audio cable. Python captures that audio, serves it 
 ## Install
 
 1. Install VB-Cable from the link above and restart your PC.
-1. Install Python dependencies:
+2. Install Python dependencies:
 
 ```
 pip install sounddevice numpy soco
@@ -30,10 +27,10 @@ pip install sounddevice numpy soco
 ## Audio Routing Setup
 
 1. Open Ableton and go to **Options > Preferences > Audio**.
-1. Set **Driver Type** to ASIO and select **ASIO4ALL v2**.
-1. Open the ASIO4ALL control panel (wrench icon in Ableton’s audio prefs).
-1. Enable **Virtual Cable 1** as an output under the Virtual Audio Cable section.
-1. Disable any other output devices you don’t need.
+2. Set **Driver Type** to ASIO and select **ASIO4ALL v2**.
+3. Open the ASIO4ALL control panel (wrench icon in Ableton’s audio prefs).
+4. Enable **Virtual Cable 1** as an output under the Virtual Audio Cable section.
+5. Disable any other output devices you don’t need.
 
 If you want to monitor on headphones while streaming to Sonos, enable your Realtek output alongside VB-Cable in ASIO4ALL. Set Ableton’s **Master Out** to the VB-Cable channels and **Cue Out** to the Realtek channels.
 
@@ -54,10 +51,10 @@ python Ableton2Sonos.py
 The script will:
 
 1. Find VB-Cable automatically
-1. Detect your PC’s local IP
-1. Start a WAV stream server on port 8090
-1. Discover your Sonos speakers
-1. Start playback on the first speaker found
+2. Detect your PC’s local IP
+3. Start a WAV stream server on port 8090
+4. Discover your Sonos speakers
+5. Start playback on the first speaker found
 
 Play something in Ableton and you should hear it on your Sonos speakers.
 
